@@ -35,4 +35,5 @@ To set up the sample:
 5. Install node dependencies of your Functions `cd functions; npm install; cd -`
 6. Deploy your project using `firebase deploy`.
 Using a 3rd party cron service, setup a daily cron job to hit the URL (don't forget to change <YOUR-KEY> and <PROJECT-ID>):
+  
 `https://us-central1-<PROJECT-ID>.cloudfunctions.net/LazyScheduler?key=<YOUR-KEY>`
