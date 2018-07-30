@@ -72,6 +72,17 @@ admin.initializeApp();
   const users = [];
   let currentTime = new Date(); //Time in UNIX Time Stamp
   let currentTimeSeconds = (currentTime.getHours() * 60 * 60) + (currentTime.getMinutes() * 60) + currentTime.getSeconds();
+      /*Safety check to make sure users who forget to disconnect their charger stop receiving notifications after 12:00 AM.
+    May set to an earlier time depending on what we need to specify. Leave a safe gap for incoming http requests*/
+  if (currentTimeSeconds > 0 && currentTimeSeconds < 3600){
+       currentUsersRef.remove()
+           .then(resp => {
+               return "Resetting the CurrentUsers node for today's charger usage.";
+           })
+           .catch(err => {
+               console.error("Issue with removing the CurrentUsers node.", err);
+           });
+    }
   console.log("Check 1 Passed!");
   console.log("Current Time is " + currentTimeSeconds);
   currentUsersRef.once('value', function (snapshot) {
