@@ -1,5 +1,6 @@
 # SimpleFirebaseMessageScheduler
 A simple firebase cloud function written for sending push notifications to a phone. Tested for Android and iOS! Code is found in the index.js file.
+
 The LazyScheduler function is working, but the nextInQueue function is in beta. Be careful on using it.
 
 # Requirements
