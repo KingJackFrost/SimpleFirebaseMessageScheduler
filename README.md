@@ -31,7 +31,7 @@ This command will work provided you have Node.js installed.
 To set up the sample:
 
 1. Create a Firebase Project using the Firebase Developer Console
-2. ownload this sample e.g. `git clone https://github.com/KingJackFrost/SimpleFirebaseMessageScheduler`
+2. Download this sample e.g. `git clone https://github.com/KingJackFrost/SimpleFirebaseMessageScheduler`
 3. Enter the sample directory `cd SimpleFirebaseMessageScheduler`
 4. Setup the sample with your project `firebase use --add` and follow the instructions.
 5. Install node dependencies of your Functions `cd functions; npm install; cd -`
